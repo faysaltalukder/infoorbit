@@ -1,0 +1,63 @@
+MOULIHAAT IMAGE SLOTS
+Put each picture in the folder shown, with exactly this file name (.jpg, .png or .webp). It appears on the site automatically, no code change needed.
+Every empty slot on the site shows its file name. Add ?slots=0 to a page address to hide the labels.
+
+LOGO (png, transparent, about 400x120)
+  images/logo.png
+
+PRODUCT PHOTOS (square, 800x800)
+  images/products/sundarbans-honey.jpg
+  images/products/flower-honey.jpg
+  images/products/pure-ghee.jpg
+  images/products/hilsa-pickle.jpg
+  images/products/beef-pickle.jpg
+  images/products/loitta.jpg
+  images/products/churi.jpg
+  images/products/shrimp.jpg
+  images/products/mango.jpg
+  images/products/cane-sugar.jpg
+  images/products/khejur-gur.jpg
+
+COMBO PHOTOS (square, 800x800)
+  images/combos/breakfast.jpg
+  images/combos/pickle-duo.jpg
+
+HOME HERO SLIDES (4:3, about 800x600; shown beside the slide text)
+  images/hero/hero-1-honey.jpg
+  images/hero/hero-2-pickles.jpg
+  images/hero/hero-3-ghee.jpg
+  images/hero/hero-4-dry-fish.jpg
+
+ROUND CATEGORY ICONS (square, 200x200; 3 pictures per category cycle inside the circle)
+  images/categories/honey-1.jpg
+  images/categories/honey-2.jpg
+  images/categories/honey-3.jpg
+  images/categories/ghee-1.jpg
+  images/categories/ghee-2.jpg
+  images/categories/ghee-3.jpg
+  images/categories/pickles-1.jpg
+  images/categories/pickles-2.jpg
+  images/categories/pickles-3.jpg
+  images/categories/dry-fish-1.jpg
+  images/categories/dry-fish-2.jpg
+  images/categories/dry-fish-3.jpg
+  images/categories/fruits-1.jpg
+  images/categories/fruits-2.jpg
+  images/categories/fruits-3.jpg
+  images/categories/sweeteners-1.jpg
+  images/categories/sweeteners-2.jpg
+  images/categories/sweeteners-3.jpg
+
+PROMO BANNERS (about 800x500; text can be part of the picture)
+  images/banners/promo-1-honey.jpg
+  images/banners/promo-2-pickles.jpg
+  images/banners/promo-3-ghee.jpg
+
+CERTIFICATES (square png, 300x300; only certificates you really hold)
+  images/certificates/cert-1.png
+  images/certificates/cert-2.png
+  images/certificates/cert-3.png
+  images/certificates/cert-4.png
+
+CORNER VIDEO (mp4)
+  media/new-arrival.mp4
