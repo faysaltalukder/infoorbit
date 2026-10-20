@@ -1,63 +1,41 @@
-MOULIHAAT IMAGE SLOTS
-Put each picture in the folder shown, with exactly this file name (.jpg, .png or .webp). It appears on the site automatically, no code change needed.
-Every empty slot on the site shows its file name. Add ?slots=0 to a page address to hide the labels.
+MOULIHAAT IMAGE ASSETS
+All current visual assets are SVG illustrations and are stored in the images/ folder. The site checks jpg, png, webp, then svg, so you can replace any illustration later with a real photo using the same base filename and a supported extension.
 
-LOGO (png, transparent, about 400x120)
-  images/logo.png
+LOGO
+ images/logo.svg
 
-PRODUCT PHOTOS (square, 800x800)
-  images/products/sundarbans-honey.jpg
-  images/products/flower-honey.jpg
-  images/products/pure-ghee.jpg
-  images/products/hilsa-pickle.jpg
-  images/products/beef-pickle.jpg
-  images/products/loitta.jpg
-  images/products/churi.jpg
-  images/products/shrimp.jpg
-  images/products/mango.jpg
-  images/products/cane-sugar.jpg
-  images/products/khejur-gur.jpg
+PRODUCTS
+ images/products/sundarbans-honey.svg
+ images/products/flower-honey.svg
+ images/products/pure-ghee.svg
+ images/products/hilsa-pickle.svg
+ images/products/beef-pickle.svg
+ images/products/loitta.svg
+ images/products/churi.svg
+ images/products/shrimp.svg
+ images/products/mango.svg
+ images/products/cane-sugar.svg
+ images/products/khejur-gur.svg
 
-COMBO PHOTOS (square, 800x800)
-  images/combos/breakfast.jpg
-  images/combos/pickle-duo.jpg
+COMBOS
+ images/combos/breakfast.svg
+ images/combos/pickle-duo.svg
 
-HOME HERO SLIDES (4:3, about 800x600; shown beside the slide text)
-  images/hero/hero-1-honey.jpg
-  images/hero/hero-2-pickles.jpg
-  images/hero/hero-3-ghee.jpg
-  images/hero/hero-4-dry-fish.jpg
+HOME HERO SLIDES
+ images/hero/hero-1-honey.svg
+ images/hero/hero-2-pickles.svg
+ images/hero/hero-3-ghee.svg
+ images/hero/hero-4-dry-fish.svg
 
-ROUND CATEGORY ICONS (square, 200x200; 3 pictures per category cycle inside the circle)
-  images/categories/honey-1.jpg
-  images/categories/honey-2.jpg
-  images/categories/honey-3.jpg
-  images/categories/ghee-1.jpg
-  images/categories/ghee-2.jpg
-  images/categories/ghee-3.jpg
-  images/categories/pickles-1.jpg
-  images/categories/pickles-2.jpg
-  images/categories/pickles-3.jpg
-  images/categories/dry-fish-1.jpg
-  images/categories/dry-fish-2.jpg
-  images/categories/dry-fish-3.jpg
-  images/categories/fruits-1.jpg
-  images/categories/fruits-2.jpg
-  images/categories/fruits-3.jpg
-  images/categories/sweeteners-1.jpg
-  images/categories/sweeteners-2.jpg
-  images/categories/sweeteners-3.jpg
+CATEGORY ILLUSTRATIONS
+ images/categories/{honey,ghee,pickles,dry-fish,fruits,sweeteners}-1.svg through -3.svg
 
-PROMO BANNERS (about 800x500; text can be part of the picture)
-  images/banners/promo-1-honey.jpg
-  images/banners/promo-2-pickles.jpg
-  images/banners/promo-3-ghee.jpg
+PROMO BANNERS
+ images/banners/promo-1-honey.svg
+ images/banners/promo-2-pickles.svg
+ images/banners/promo-3-ghee.svg
 
-CERTIFICATES (square png, 300x300; only certificates you really hold)
-  images/certificates/cert-1.png
-  images/certificates/cert-2.png
-  images/certificates/cert-3.png
-  images/certificates/cert-4.png
+CERTIFICATES
+ No certificate images are fabricated. Add only genuine certificates your business actually holds.
 
-CORNER VIDEO (mp4)
-  media/new-arrival.mp4
+Note: These are custom vector illustrations, not photographs of actual inventory. Replace with authentic product photography when available.
