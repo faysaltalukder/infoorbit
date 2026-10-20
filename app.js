@@ -13,13 +13,48 @@ const P=[...P0,...EXTRA];
 const C=[['breakfast','Breakfast Combo','মধু + ঘি',[['Pack',1650]],1890],['pickle-duo','Pickle Duo Combo','ইলিশ + বিফ আচার',[['Pack',1798]],1998]].map(a=>({id:a[0],n:a[1],b:a[2],c:'combo',s:a[3],o:a[4]}));
 const ALL=[...P,...C],F=id=>ALL.find(p=>p.id==id),D=p=>p.o?Math.round((1-p.s[0][1]/p.o)*100):0;
 const GALLERY={
- honey:["https://images.unsplash.com/photo-1626132660920-374ad3f518fe?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1568657704598-602700bd9694?auto=format&fit=crop&w=1000&q=85","https://images.unsplash/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1000&q=85"],
- ghee:["https://images.unsplash.com/photo-1573812461383-e5f8b759d12e?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1000&q=85"],
- pickles:["https://images.unsplash.com/photo-1562346816-33f5e737bb61?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1706167754852-128daa40126a?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"],
- "dry-fish":["https://images.unsplash.com/photo-1578235707164-69a7c3d4a036?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1542959931-953c9bbe8639?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1576021159763-6bb04ad382fd?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=1000&q=85"],
- fruits:["https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1600703090131-9639c5955cbd?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1519996529931-28324d6a630e?auto=format&fit=crop&w=1000&q=85"],
- sweeteners:["https://images.unsplash.com/photo-1777647262315-85a44b21ebab?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1715610546863-c4c54fbbd797?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1000&q=85"],
- combo:["https://images.unsplash.com/photo-1573812461383-e5f8b759d12e?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1562346816-33f5e737bb61?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1626132660920-374ad3f518fe?auto=format&fit=crop&w=1000&q=85","https://images.unsplash.com/photo-1706167754852-128daa40126a?auto=format&fit=crop&w=1000&q=85"]
+ honey:[
+ "https://images.unsplash.com/photo-1626132660920-374ad3f518fe?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1568657704598-602700bd9694?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1000&q=85"
+ ],
+ ghee:[
+ "https://media.assettype.com/thequint/2023-03/5c2c8085-85f7-4939-8a54-fd1bdd9ca6eb/pure_or_desi_ghee_clarified_melted_butter_healthy_fats_bulletproof_diet_concept_or_paleo_jpg_s_1024x.jpg",
+ "https://images.unsplash.com/photo-1573812461383-e5f8b759d12e?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1000&q=85"
+ ],
+ pickles:[
+ "https://pothgaal.com/cdn/shop/files/pickles.png?v=1783582479&width=1920",
+ "https://images.unsplash.com/photo-1562346816-33f5e737bb61?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1706167754852-128daa40126a?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+ ],
+ "dry-fish":[
+ "https://images.unsplash.com/photo-1642687045792-8b5d50da600d?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1578235707164-69a7c3d4a036?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1542959931-953c9bbe8639?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1576021159763-6bb04ad382fd?auto=format&fit=crop&w=1000&q=85"
+ ],
+ fruits:[
+ "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1600703090131-9639c5955cbd?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1519996529931-28324d6a630e?auto=format&fit=crop&w=1000&q=85"
+ ],
+ sweeteners:[
+ "https://images.squarespace-cdn.com/content/v1/57ce730f46c3c4013760abee/971b685d-09a3-415a-b279-a8a917439eaf/JasmineHemsley_Sugars_NickHopperPhotography-1566.jpg",
+ "https://images.unsplash.com/photo-1715610546863-c4c54fbbd797?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1000&q=85"
+ ],
+ combo:[
+ "https://media.assettype.com/thequint/2023-03/5c2c8085-85f7-4939-8a54-fd1bdd9ca6eb/pure_or_desi_ghee_clarified_melted_butter_healthy_fats_bulletproof_diet_concept_or_paleo_jpg_s_1024x.jpg",
+ "https://pothgaal.com/cdn/shop/files/pickles.png?v=1783582479&width=1920",
+ "https://images.unsplash.com/photo-1626132660920-374ad3f518fe?auto=format&fit=crop&w=1000&q=85",
+ "https://images.unsplash.com/photo-1706167754852-128daa40126a?auto=format&fit=crop&w=1000&q=85"
+ ]
 };
 const gallery=p=>{const pool=GALLERY[p.c]||GALLERY.honey;const idx=Math.max(0,p.c==='combo'?C.indexOf(p):P.indexOf(p));const shift=idx%pool.length;return [0,1,2,3].map(i=>pool[(i+shift)%pool.length])};
 
@@ -28,7 +63,7 @@ const cnt=()=>{$$('.cn').forEach(e=>e.textContent=cart.reduce((a,c)=>a+c.q,0));$
 const toast=m=>{let t=document.createElement('div');t.className='toast';t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),1800)};
 const add=(id,i=0,q=1)=>{let x=cart.find(c=>c.id==id&&c.i==i);x?x.q+=q:cart.push({id,i,q});sv();toast(F(id).n+' added to cart')};
 const sub=()=>cart.reduce((a,c)=>a+F(c.id).s[c.i][1]*c.q,0);
-const art=p=>{const b=(p.c=='combo'?'images/combos/':'images/products/')+p.id;return `<div class="art slot" style="--c:${CAT[p.c][2]}"><b>${CAT[p.c][3]}</b><small>${p.n}</small><span class="fn">${b}.jpg</span>${im(b)}</div>`};
+const art=p=>{const photos=gallery(p);return `<div class="art slot product-card-art" style="--c:${CAT[p.c][2]}"><img class="catalog-photo" src="${photos[0]}" alt="${p.n} — demo product photo" loading="lazy"><span class="photo-shade"></span><span class="photo-label">${p.n}</span></div>`};
 const card=p=>`<article class="card"><a href="product.html?id=${p.id}" class="im">${art(p)}${D(p)?`<span class="bd">-${D(p)}%</span>`:''}</a><button class="hr ${wl.includes(p.id)?'on':''}" data-w="${p.id}" aria-label="Save">♥</button><a href="product.html?id=${p.id}" class="nm">${p.n}<small>${p.b}</small></a>${p.s.length>1?`<select data-s="${p.id}">${p.s.map((s,i)=>`<option value="${i}">${s[0]} — ${T(s[1])}</option>`).join('')}</select>`:`<div class="pr">${T(p.s[0][1])} ${p.o?`<s>${T(p.o)}</s>`:''}</div>`}<button class="add" data-a="${p.id}">Add to Cart</button></article>`;
 const logo=`<img class="lgi" src="images/logo.svg" alt="Moulihaat" onload="this.parentNode.classList.add('hl')" onerror="this.remove()"><svg viewBox="0 0 40 40" width="36" aria-hidden="true"><path d="M20 2l15 9v18l-15 9L5 29V11z" fill="#d4a017"/><path d="M20 10l8 5v10l-8 5-8-5V15z" fill="#fffbea"/><circle cx="20" cy="20" r="3.5" fill="#d4a017"/></svg>`;
 const head=pg=>`<header><div class="w hd"><a href="index.html" class="lg">${logo}<span><b>Moulihaat</b><small>মৌলিহাট</small></span></a><nav>${[['home','index','Home'],['shop','shop','Products'],['combos','combos','Combos']].map(x=>`<a href="${x[1]}.html" class="${pg==x[0]?'on':''}">${x[2]}</a>`).join('')}</nav><div class="sr"><input id="q" placeholder="Search honey, ghee, pickle…" autocomplete="off" aria-label="Search"><div id="sg"></div></div><a href="wishlist.html">♡ Saved <i class="wl-n"></i></a><a href="cart.html">🛒 Cart <i class="cn"></i></a><a href="login.html">Sign In</a></div></header><div class="cats"><div class="w">${KS.map(k=>`<a href="shop.html?cat=${k}">${CAT[k][3]} ${CAT[k][1]}</a>`).join('')}</div></div>`;
