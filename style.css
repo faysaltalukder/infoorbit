@@ -51,3 +51,8 @@ footer{background:#fff;border-top:1px solid var(--ln);margin-top:40px;padding:32
 .hs{display:grid;place-items:center;align-content:center;height:260px;border-radius:16px;background:radial-gradient(circle at 30% 25%,#fff,color-mix(in srgb,var(--c) 55%,#fff))}.hs b{font-size:110px;line-height:1;filter:drop-shadow(0 10px 12px #0003)}
 .promo a .fn{position:absolute;top:8px;left:8px;margin:0}.promo a{position:relative}.vb .fn{background:#0006;color:#fff}
 .lgi{height:38px;width:auto}.lg.hl svg,.lg.hl span{display:none}.nolbl .fn{display:none}
+/* Desktop visual scale: emulate browser zoom at 125% while keeping browser zoom at 100%. */
+@media (min-width: 768px){
+  html{zoom:1.25}
+  .w{width:80%;max-width:896px}
+}
