@@ -1,0 +1,64 @@
+name: One-time Resource Library image transfer
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/resource-library-transfer.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  copy-library-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out InfoOrbit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download and verify original images
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="resource-library-transfer-test/fashion"
+          mkdir -p "$DEST"
+
+          copy_image() {
+            local encoded_name="$1"
+            local filename="$2"
+            local expected_sha="$3"
+            local url="https://raw.githubusercontent.com/faysaltalukder/Central-resource-library-for-all-website-projects-images/main/pictures/fashion/$encoded_name"
+            local output="$DEST/$filename"
+
+            curl --fail --location --retry 3 --retry-delay 2 --silent --show-error "$url" --output "$output"
+            local actual_sha
+            actual_sha="$(git hash-object "$output")"
+            if [[ "$actual_sha" != "$expected_sha" ]]; then
+              echo "SHA mismatch for $filename: expected $expected_sha, got $actual_sha" >&2
+              exit 1
+            fi
+            echo "Verified $filename ($actual_sha)"
+          }
+
+          copy_image "ChatGPT%20Image%20Sep%2012%2C%202026%2C%2005_06_31%20PM.png" "ChatGPT Image Sep 12, 2026, 05_06_31 PM.png" "293be960d7a207c6402d54d0ef3bbb884bb2fd0f"
+          copy_image "ChatGPT%20Image%20Sep%2012%2C%202026%2C%2005_22_12%20PM.png" "ChatGPT Image Sep 12, 2026, 05_22_12 PM.png" "01dea321b3d2c72ece7946cd20c09b83cf6dffe2"
+          copy_image "ChatGPT%20Image%20Sep%2012%2C%202026%2C%2005_22_16%20PM.png" "ChatGPT Image Sep 12, 2026, 05_22_16 PM.png" "d50d52d08d7bb0743c2e09fd155f29017c8065fd"
+          copy_image "ChatGPT%20Image%20Sep%2012%2C%202026%2C%2005_22_22%20PM.png" "ChatGPT Image Sep 12, 2026, 05_22_22 PM.png" "800d345e4b595fd1afd1f3691d55f6657e31fa80"
+
+      - name: Commit reversible test copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add resource-library-transfer-test/fashion
+          if git diff --cached --quiet; then
+            echo "No new files to commit."
+            exit 0
+          fi
+          git commit -m "Test copy fashion assets from central resource library"
+          git push origin HEAD:main
